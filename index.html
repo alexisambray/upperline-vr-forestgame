@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Forest Game</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+  <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+      <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+
+  
+
+</head>
+
+<body>
+    <a-scene>
+       
+        <a-assets>
+            
+        </a-assets>
+        <a-entity id="fruit">
+            <!--<a-sphere position="1 10 -10" scale="0.3 0.3 0.3" radius= "0.3 0.3 0.3" dynamic-body></a-sphere>-->
+       
+        </a-entity>
+        <a-text id="scoreThingee" width="50" rotation="0 -45 0" position="7.5 7.5 -9" color="green" value="Score: 0"></a-text>
+        <a-entity gblock="https://poly.google.com/view/aTAr4AayOrB" scale="0.007 0.007 0.007" rotation="-90" position="4 0 -8"></a-entity>
+        <a-entity gblock="https://poly.google.com/view/cKi5RxMBUxO" scale="0.02 0.02 0.02" rotation = "0 60 0" position="12"></a-entity>
+        <a-entity gblock="https://poly.google.com/view/eGdXC-5V2wM" scale="5 5 5" position="-6 -10 7"></a-entity>
+        <a-entity gblock="https://poly.google.com/view/ahJ3o0NEA86" scale="0.3 0.3 0.3" position="-1 0 -10"></a-entity>
+        
+      <!--<a-box score-counter position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>-->
+      <!--<a-entity id="score" text="value: Score: 0" position="0 2 -1"></a-entity> -->
+
+        <a-box id="clickyBox" position="7.5 0 -3" height="5" rotation="0 45 0" color="#f29d7b"></a-box>
+        <a-entity environment="preset: forest; groundColor: #065919; skyColor: #c4ecff; groundTexture: none"></a-entity>
+        <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="10000" height="100000" color="#065919"></a-plane>
+        <a-camera id="player" camera look-controls jump-ability kinematic-body position="1 4 2">
+            <a-cursor> </a-cursor>
+           
+            
+            <a-entity position="0 -1 -1" scale="0.4 0.4 0.4" id="character">
+                <a-entity gblock="https://poly.google.com/view/aWBGhxXig8y" scale="0.3 0.3 0.3" position="0 0 -2"></a-entity>
+            
+            
+
+            </a-entity>
+           
+            <!--<a-entity scale= "0.035 0.035 0.035" rotation="0 90 0" animation-mixer json-model="src: url(https://webvr.donmccurdy.com/assets/3-dreams-of-black/wolf.json);" position visible ></a-entity>-->
+            <!--</a-entity>-->
+            <!--<a-obj-model src= "#Fishingnet.obj" mtl="#Fishingnet.obj" scale = "0.3 0.3 0.3"></a-obj-model>-->
+        </a-camera>
+
+    </a-scene>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
